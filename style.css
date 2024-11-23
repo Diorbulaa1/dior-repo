@@ -1,0 +1,313 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #2d3e50; /* Dark Blue */
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #e63946; /* Bright Red */
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #f1faee;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    background-color: #e63946;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('https://via.placeholder.com/1920x600');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 120px 20px;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.hero-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-container p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.cta-btn {
+    padding: 12px 30px;
+    background-color: #e63946;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn:hover {
+    background-color: #f1faee;
+    color: #1d3557;
+}
+
+/* Ask Section Styles */
+.ask-section {
+    padding: 80px 20px;
+    background-color: #1d3557;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ask-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.ask-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+#user-query {
+    padding: 15px;
+    width: 60%;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    margin-right: 10px;
+    outline: none;
+    transition: border 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#user-query:focus {
+    border: 2px solid #e63946;
+}
+
+#ask-btn {
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#ask-btn:hover {
+    background-color: #f1faee;
+    color: #1d3557;
+    transform: scale(1.05);
+}
+
+/* Response Container */
+#response-container {
+    margin-top: 30px;
+    padding: 20px;
+    font-size: 1.2rem;
+    background-color: #f1faee;
+    color: #333;
+    display: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Featured Destinations Section */
+.destinations-section {
+    background-color: #f4f7f6;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.destinations-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.destination-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.destination-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover .destination-img {
+    transform: scale(1.05);
+}
+
+.destination-card h3 {
+    padding: 15px;
+    font-size: 1.5rem;
+    background-color: #e63946;
+    color: white;
+    margin: 0;
+}
+
+.destination-card p {
+    padding: 15px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.destination-link {
+    display: block;
+    padding: 12px 20px;
+    margin: 15px;
+    text-align: center;
+    background-color: #2d3e50;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.destination-link:hover {
+    background-color: #e63946;
+}
+
+/* Explore More Section */
+.explore-section {
+    padding: 80px 20px;
+    background-color: #2d3e50;
+    color: white;
+    text-align: center;
+}
+
+.explore-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.explore-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.explore-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.explore-card:hover .explore-img {
+    transform: scale(1.05);
+}
+
+.explore-card h3 {
+    padding: 15px;
+    font-size: 1.3rem;
+    background-color: #e63946;
+    color: white;
+}
+
+.explore-card p {
+    padding: 15px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Footer Section */
+footer {
+    background-color: #2d3e50;
+    padding: 20px 40px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1rem;
